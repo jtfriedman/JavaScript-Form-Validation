@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["MyForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+}
+  var y = document.forms["MyForm"]["lname"].value;
+  if (y == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  var z = document.forms["MyForm"]["email"].value;
+  if (z == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+}
+</script>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+</style>
+<title>Business Page</title>
+</head>
+<body>
+<center>
+<h1>Customer Information</h1>
+<form name="MyForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit" value="Submit">
+</form>
+</center>
+</body>
+</html>
